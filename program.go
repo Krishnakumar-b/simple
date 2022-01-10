@@ -5,33 +5,39 @@ import (
 )
 
 func calculate(n int64) int64 {
-	var arrNum [3]int
-	var sum, rem int64
 
-	i := 0
+	var sum, rem int64
 
 	for n != 0 {
 		rem = n % 10
-		arrNum[i] = int(rem)
-		i++
 		sum = sum + rem
 		n = n / 10
 	}
-	// var mapNumber map[int]int
-	// mapNumber=arrNum
-	// for i=len(arrNum);i>=0;i-- {
 
-	// }
 	return sum
 }
 
 func main() {
 	var n int64
+
+	var arrNum [8]int64
+
+	fmt.Println("enter a number of maximum length 8")
 	_, err := fmt.Scanf("%d", &n)
 	if err != nil {
 		fmt.Print(err)
 	}
-	fmt.Print("" + n)
+	i := 0
+
+	num := n
+	for num != 0 {
+		arrNum[i] = num % 10
+		num = num / 10
+		i++
+	}
+
+	inttostring := fmt.Sprintf("%s", arrNum)
+	fmt.Printf("%T\n", inttostring)
 
 	number := calculate(n)
 	for {
@@ -40,7 +46,6 @@ func main() {
 		}
 		break
 	}
-
-	fmt.Println(n, number)
+	fmt.Println(number)
 
 }
