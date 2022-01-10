@@ -17,12 +17,13 @@ func calculate(n int) int {
 }
 
 func main() {
-	number := calculate(9999)
+	n := 9999999999999
+	number := calculate(n)
 	for {
 		if number > 9 {
 			number = calculate(number)
 		}
 		break
 	}
-	fmt.Println(number)
+	fmt.Println(n, number)
 }

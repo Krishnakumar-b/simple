@@ -1,0 +1,7 @@
+Setup the routes
+func GetMessage(c *fiber.Ctx) error {
+	name := c.Params("name")
+	fmt.Printf(name)
+	c.SendString(name)
+	return nil
+}
