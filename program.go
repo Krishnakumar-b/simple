@@ -12,9 +12,6 @@ func calculate(n int64) int64 {
 
 	for n != 0 {
 		rem = n % 10
-		if rem == 0 {
-			fmt.Print("error")
-		}
 		arrNum[i] = int(rem)
 		i++
 		sum = sum + rem
@@ -34,6 +31,7 @@ func main() {
 	if err != nil {
 		fmt.Print(err)
 	}
+	fmt.Print("" + n)
 
 	number := calculate(n)
 	for {

@@ -1,7 +1,14 @@
-Setup the routes
+//Setup the routes
+//get api
 func GetMessage(c *fiber.Ctx) error {
 	name := c.Params("name")
-	fmt.Printf(name)
-	c.SendString(name)
-	return nil
+	return c.SendString(name)
+}
+
+
+//Setup the routes
+//post api
+func GetMessage(c *fiber.Ctx) error {
+	data := c.Request().Body()
+	return c.Send(data)
 }
