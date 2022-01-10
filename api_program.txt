@@ -7,7 +7,7 @@ func GetMessage(c *fiber.Ctx) error {
 
 
 //Setup the routes
-//post api
+//post api code
 func GetMessage(c *fiber.Ctx) error {
 	data := c.Request().Body()
 	return c.Send(data)
