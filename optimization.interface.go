@@ -1,9 +1,30 @@
-package main
+// package main
 
-type DataType interface {
-}
+// import (
+// 	"fmt"
+// 	"go/types"
+// )
 
-func calculate(T DataType) DataType {
+// type DataType interface {
+// }
 
-	return nil
-}
+// func calculat(T DataType) error {
+
+// 	fmt.Println(T)
+// 	xtype := fmt.Sprintf("%T", T)
+// 	fmt.Println("*****", xtype)
+
+// 	if xtype == types.Int {
+// 		fmt.Println("string")
+// 	}
+// 	return nil
+// }
+// func main() {
+// 	var i interface{}
+
+// 	i = 42
+// 	calculat(i)
+
+// 	// i = "hello"
+// 	// calculat(i)
+// }

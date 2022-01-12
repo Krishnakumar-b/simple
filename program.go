@@ -25,7 +25,7 @@ func main() {
 	fmt.Printf("%T", x)
 	fmt.Println("enter a number of maximum length 8")
 	_, err := fmt.Scanf("%d", &n)
-
+	fmt.Print(n)
 	if n > 99999999 {
 		fmt.Println("Error")
 		os.Exit(0)
